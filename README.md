@@ -36,7 +36,7 @@ __TODO: not sure if you strictly have to be anywhere to activate and use this my
 
 Do this from _within_ the mysite project directory:
 
-	Mac
+	Mac / Unix
 	$ source ../my-venv/bin/activate
 
 	PC
