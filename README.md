@@ -82,13 +82,21 @@ You _must_ be inside the mysite project directory (e.g. mysite/mysite/...) You c
 
 	(my-env) $ python manage.py runserver
 
+	Performing system checks...
+
+	System check identified no issues (0 silenced).
+	September 24, 2018 - 16:22:46
+	Django version 2.1.1, using settings 'mysite.settings'
+	Starting development server at http://127.0.0.1:8000/
+	Quit the server with CONTROL-C.
+
 __Note:__ If you intend to make changes to this Django project using the shell, or if you want to play with Django's interactive shell commands, it is recommended to use two separate terminal windows (cmd.exe on Windows). Run the Django server from the my-env virtual environment, as shown above, which will tie up this terminal, and display relevant Django server status information.
 
 The Django server will continue to run until it is killed with Ctrl+C, or else some other error occurs (e.g. remove one or more critical project files).
 
 ### Viewing the Django Project
 
-When you run the Django webserver, you will see an IP address (likely http://localhost:8000/polls). Copy this to your browser to see the polls application in our mysite project.
+When you run the Django webserver, you will see an IP address (likely http://127.0.0.1:8000/). Copy this URL and paste it into your browser's address bar. Try loading the page and notice it fails. Append 'polls' the end of the URL (http://127.0.0.1:8000/polls/) and reload the page. You should now be seeing the polls app.
 
 ### Viewing the Django Admin Site
 
