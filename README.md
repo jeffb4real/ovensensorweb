@@ -30,7 +30,9 @@ Issue this command _outside of_ any local repository directory (I recommend the 
 	or just
 	$ python3 -m venv my-venv
 
-### Activate your virtual environment (venv)
+### Activate your Virtual Environment
+
+__TODO: not sure if you strictly have to be anywhere to activate and use this my-env.__
 
 Do this from _within_ the mysite project directory:
 
@@ -46,7 +48,9 @@ __Note:__ It is possible and sometimes advisable to have two instances of the sa
 
 __Note:__ pip is the preferred package installer program for Python. Starting with Python 3.4, it is included by default with the Python binary installers.
 
-Feel free to use pip to install any packages that you like. The only additional package we need for the Django tutorial is Django itself. To install:
+This step assumes you've completed the previous step, Activate your Virtual Environment, and that the virtual environment is active.
+
+The only additional package we need for the Django tutorial is Django itself. To install:
 
 	(my-env) $ python3 -m pip install django
 
