@@ -63,7 +63,7 @@ Here's a before and after of pip versions:
 	(my-venv) $ pip --version
 	pip 10.0.1 from /Users/urieow/mygithub/my-venv/lib/python3.7/site-packages/pip (python 3.7)
 	
-	(my-venv) $ python -m pip install --upgrade pip
+	(my-venv) $ python3 -m pip install --upgrade pip
 	Collecting pip
 	  Using cached https://files.pythonhosted.org/packages/5f/25/e52d3f31441505a5f3af41213346e5b6c221c9e086a166f3703d2ddaf940/pip-18.0-py2.py3-none-any.whl
 	Installing collected packages: pip
@@ -88,7 +88,7 @@ The Django server will continue to run until it is killed with Ctrl+C, or else s
 
 When you run the Django webserver, you will see an IP address (likely http://localhost:8000/polls). Copy this to your browser to see the polls application in our mysite project.
 
-### Viewing the Django Admin
+### Viewing the Django Admin Site
 
 Paste the following into your browser:
 
@@ -97,5 +97,12 @@ Paste the following into your browser:
 __Note:__ 127.0.0.1 is an alias for localhost
 
 
+### References
 
+Virtual Environments
+https://docs.python.org/3/library/venv.html?highlight=venv
+Pip
+https://docs.python.org/3/installing/index.html
+Markdown
+https://www.markdownguide.org/basic-syntax/
 
