@@ -32,7 +32,7 @@ Issue this command _outside of_ any local repository directory (I recommend the 
 
 ### Activate your Virtual Environment
 
-__TODO: not sure if you strictly have to be anywhere to activate and use this my-env.__
+__TODO: not sure if you strictly have to be anywhere to activate and use this my-env__
 
 Do this from _within_ the mysite project directory:
 
@@ -106,7 +106,7 @@ The Django server will continue to run until it is killed with Ctrl+C, or else s
 
 ### Viewing the Django Project
 
-When you run the Django webserver, you will see an IP address (likely http://127.0.0.1:8000/). Copy this URL and paste it into your browser's address bar. Try loading the page and notice it fails. Append 'polls' the end of the URL (http://127.0.0.1:8000/polls/) and reload the page. You should now be seeing the polls app.
+When you run the Django webserver, you will see a URL, as shown in the previous step (likely http://127.0.0.1:8000/). Copy this URL and paste it into your browser's address bar. Try loading the page and notice it fails. Append 'polls' to the end of the URL (http://127.0.0.1:8000/polls/) and reload the page. You should now be seeing the polls app.
 
 ### Viewing the Django Admin Site
 
@@ -116,6 +116,7 @@ Paste the following into your browser:
 	
 __Note:__ 127.0.0.1 is an alias for localhost
 
+__TODO: Not sure if admin username/password were added to Github.__
 
 ### References
 
