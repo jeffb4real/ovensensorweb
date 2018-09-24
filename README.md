@@ -22,7 +22,7 @@ __Note:__ The pyvenv script has been deprecated as of Python 3.6 in favor of usi
 
 Virtual environments are typically created on each user's PC and are not added to source control.
 
-Issue this command _outside of_ any local repository directory, so that your new virtual environment won't be added to source control. We'll call our virtual environment 'my-env':
+Issue this command _outside of_ any local repository directory (I recommend the parent directory of the repository directory), so that your new virtual environment won't be added to source control. We'll call our virtual environment 'my-env':
 
 	$ python3 -m venv /path/to/new/virtual/environment
 	or just
@@ -76,7 +76,9 @@ Here's a before and after of pip versions:
 
 One strength of the Django web framework is that it includes its own webserver and flexible database backend. To utilize this we must first run the server.
 
-As with most Django-related commands, we use manage.py, which was created at the root of our project directory, when we created the Django project.
+As with most Django-related commands (e.g. to create a Django project or application, etc.), we use manage.py, which was created at the root of our project directory, when we created the Django project.
+
+You _must_ be inside the mysite project directory (e.g. mysite/mysite/...) You can tell which directory is the correct directory, because it will contain manage.py.
 
 	(my-env) $ python manage.py runserver
 
