@@ -121,8 +121,10 @@ __Note:__ 127.0.0.1 is an alias for localhost
 
 Virtual Environments
 https://docs.python.org/3/library/venv.html?highlight=venv
+
 Pip
 https://docs.python.org/3/installing/index.html
+
 Markdown
 https://www.markdownguide.org/basic-syntax/
 
