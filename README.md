@@ -9,6 +9,8 @@ This repository is planned to be integrated into chrisxkeith's repository of the
 
 ## Tools Dependencies and Installation Instructions
 
+The following sections detail all steps required to run the polls app in this Django project, mysite.
+
 ### Install Python3
 
 Download and install Python 3 for your platform:
