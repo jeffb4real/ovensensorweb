@@ -82,7 +82,7 @@ As with most Django-related commands (e.g. to create a Django project or applica
 
 You _must_ be inside the mysite project directory (e.g. mysite/mysite/...) You can tell which directory is the correct directory, because it will contain manage.py.
 
-	(my-env) $ python manage.py runserver
+	(my-env) $ python3 manage.py runserver
 
 	Performing system checks...
 
