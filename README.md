@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains a Django tutorial project directory, 'mysite'. There is one app in the project, named 'polls'. The Django tutorial was completed up to and including part 05:
+This repository contains a Django tutorial project directory, 'mysite'. There is one web application in the project, named 'polls'. The Django tutorial was completed up to and including part 05:
 
 https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 
@@ -17,7 +17,7 @@ The following sections detail all steps required to run the polls app in this Dj
 Download and install Python 3 for your platform:
 https://www.python.org/downloads/
 
-Python 3.7 was used for this the Django tutorial.
+Python 3.7.0 was used for this the Django tutorial.
 
 ### Set up your virtual environment
 
@@ -33,9 +33,7 @@ Issue this command _outside of_ any local repository directory (I recommend the 
 
 ### Activate your Virtual Environment
 
-__TODO: not sure if you strictly have to be anywhere to activate and use this my-env__
-
-Do this from _within_ the mysite project directory:
+Do this from _within_ the mysite project root directory:
 
 	Mac / Unix
 	$ source ../my-venv/bin/activate
@@ -47,7 +45,7 @@ You should now see a command-line prompt that is pre-pended with the name of the
 
 	(my-venv) $ ls
 	
-__Note:__ It is possible and sometimes advisable to have two instances of the same virtual environment, within two separate terminal windows (aka command prompt or cmd.exe on Windows). See more on this below, under 'Running the Django Server'.
+__Note:__ It is possible and sometimes advisable to have two instances of the same virtual environment, within two separate terminal windows (aka Command Prompt or cmd.exe on Windows). See more on this below, under 'Running the Django Server'.
 
 ### Install Additional Python packages
 
@@ -55,11 +53,11 @@ __Note:__ pip is the preferred package installer program for Python. Starting wi
 
 This step assumes you've completed the previous step, Activate your Virtual Environment, and that the virtual environment is active.
 
-The only additional package we need for the Django tutorial is Django itself. To install:
+The only additional package we need for the Django tutorial is Django itself. To install it into our virtual environment:
 
 	(my-env) $ python3 -m pip install django
 
-Feel free to skip ahead to the next section if you don't want any additional optional packages or updates.
+Feel free to skip ahead to the next section if you don't want any additional optional packages or update pip.
 
 I also like the following package, which can give pop-up tips and extra color-coding while in the Python interactive shell:
 
@@ -85,11 +83,11 @@ Here's a before and after of pip versions:
 
 ### Running the Django Server
 
-One strength of the Django web framework is that it includes its own webserver and flexible database backend. To utilize this we must first run the server.
+The Django web framework includes its own web server and backend database (SQLite). To utilize these features we must first run the server.
 
-As with most Django-related commands (e.g. to create a Django project or application, etc.), we use manage.py, which was created at the root of our project directory, when we created the Django project.
+Many Django tools (e.g. creating a Django project, create an application, run tests, etc.) are available through manage.py, which was created at the root of our project directory, when we created the Django project. For a complete list of Django capabilities, type 'python3 manage.py --help'.
 
-You _must_ be inside the mysite project directory (e.g. mysite/mysite/...) You can tell which directory is the correct directory, because it will contain manage.py.
+You _must_ be inside the mysite project root directory (e.g. mysite/...) You can tell which directory is the correct directory, because it will contain manage.py.
 
 	(my-env) $ python3 manage.py runserver
 
@@ -101,11 +99,11 @@ You _must_ be inside the mysite project directory (e.g. mysite/mysite/...) You c
 	Starting development server at http://127.0.0.1:8000/
 	Quit the server with CONTROL-C.
 
-__Note:__ If you intend to make changes to this Django project using the shell, or if you want to play with Django's interactive shell commands, it is recommended to use two separate terminal windows (cmd.exe on Windows). Run the Django server from the my-env virtual environment, as shown above, which will tie up this terminal, and display relevant Django server status information.
+__Note:__ It is recommended to use two separate terminal windows (cmd.exe on Windows), both of which can simultaneouly invoke the same virtual environment, in our case 'my-venv'. Run the Django server as shown above, in one terminal, which will display relevant Django server status information. Use the other terminal with the same 'my-venv' virtual environment to access Django's interactive shell commands, or to utilize manage.py.
 
-The Django server will continue to run until it is killed with Ctrl+C, or else some other error occurs (e.g. remove one or more critical project files).
+The Django server will continue to run until it is killed with Ctrl+C, or else some other error occurs (e.g. remove or adversely change one or more critical project files).
 
-### Viewing the Django Project
+### Running our Django Web Application
 
 When you run the Django webserver, you will see a URL, as shown in the previous step (likely http://127.0.0.1:8000/). Copy this URL and paste it into your browser's address bar. Try loading the page and notice it fails. Append 'polls' to the end of the URL (http://127.0.0.1:8000/polls/) and reload the page. You should now be seeing the polls app.
 
@@ -117,7 +115,6 @@ Paste the following into your browser:
 	
 __Note:__ 127.0.0.1 is an alias for localhost
 
-__TODO: Not sure if admin username/password were added to Github.__
 
 ### References
 
