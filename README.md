@@ -40,7 +40,7 @@ Do this from _within_ the mysite project directory:
 	Mac / Unix
 	$ source ../my-venv/bin/activate
 
-	PC
+	Windows
 	$ ../my-venv/bin/activate.bat	
 
 You should now see a command-line prompt that is pre-pended with the name of the virtual environment:
