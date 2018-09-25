@@ -3,6 +3,7 @@
 ## Overview
 
 This repository contains a Django tutorial project directory, 'mysite'. There is one app in the project, named 'polls'. The Django tutorial was completed up to and including part 05:
+
 https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 
 This repository is planned to be integrated into chrisxkeith's repository of the same name.
@@ -16,7 +17,7 @@ The following sections detail all steps required to run the polls app in this Dj
 Download and install Python 3 for your platform:
 https://www.python.org/downloads/
 
-Python 3.7 was used during the Django tutorial.
+Python 3.7 was used for this the Django tutorial.
 
 ### Set up your virtual environment
 
