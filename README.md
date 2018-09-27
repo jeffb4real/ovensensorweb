@@ -19,35 +19,40 @@ https://www.python.org/downloads/
 
 Python 3.7.0 was used for this the Django tutorial.
 
+__Note:__ Depending on your system environment, and whether or not you've also installed Python 2.x, you may need to call Python 3 specifically, e.g. '$ python3 my-script.py'. Regardless, wherever 'python' appears below, we are intending to use Python 3.
+
 ### Set up your virtual environment
 
 __Note:__ The pyvenv script has been deprecated as of Python 3.6 in favor of using python3 -m venv to help prevent any potential confusion as to which Python interpreter a virtual environment will be based on.
 
 Virtual environments are typically created on each user's PC and are not added to source control.
 
-Issue this command _outside of_ any local repository directory (I recommend the parent directory of the repository directory), so that your new virtual environment won't be added to source control. We'll call our virtual environment 'my-env':
+Issue this command to create our virtual environment _outside of_ any local repository directory (I recommend the parent directory of the repository directory - in our case, ~/mygithub), so that your new virtual environment won't be added to source control. We'll call our virtual environment 'my-env':
 
-	$ python3 -m venv /path/to/new/virtual/environment
+	~/mygithub $ python -m venv /path/to/new/virtual/environment
 	or just
-	$ python3 -m venv my-venv
+	~/mygithub $ python -m venv my-venv
 
 ### Activate your Virtual Environment
 
 Do this from _within_ the mysite project root directory:
 
-	Mac / Unix
-	$ source ../my-venv/bin/activate
+	Mac / Linux
+	~/mygithub/ovensensorweb/mysite $ source ../my-venv/bin/activate
 
 	Windows
-	$ ../my-venv/bin/activate.bat	
+	C:\Users\jeffb4real\mygithub\ovensensorweb\mysite $ ..\my-env\scripts\activate.bat	
 
-You should now see a command-line prompt that is pre-pended with the name of the virtual environment:
+You should now see a command-line prompt that is pre-pended with the name of the virtual environment, "(my-venv)" as shown below. Here we're checking that our python resides within our virtual environment and that it is the proper version (Python 3 or greater).
 
-	(my-venv) $ ls
+	(my-venv) ~/mygithub/ovensensorweb/mysite $ which python
+	/Users/jeffb4real/mygithub/my-venv/bin/python
+	(my-venv) ~/mygithub/ovensensorweb/mysite $ python --version
+	Python 3.7.0
 	
 __Note:__ It is possible and sometimes advisable to have two instances of the same virtual environment, within two separate terminal windows (aka Command Prompt or cmd.exe on Windows). See more on this below, under 'Running the Django Server'.
 
-### Install Additional Python packages
+### Install the Django Python Package
 
 __Note:__ pip is the preferred package installer program for Python. Starting with Python 3.4, it is included by default with the Python binary installers.
 
@@ -55,24 +60,24 @@ This step assumes you've completed the previous step, Activate your Virtual Envi
 
 The only additional package we need for the Django tutorial is Django itself. To install it into our virtual environment:
 
-	(my-env) $ python3 -m pip install django
+	(my-env) ~/mygithub/ovensensorweb/mysite $ python -m pip install django
 
-Feel free to skip ahead to the next section if you don't want any additional optional packages or update pip.
+_Feel free to skip ahead to the next section if you don't want to install any optional packages or update pip._
 
 I also like the following package, which can give pop-up tips and extra color-coding while in the Python interactive shell:
 
-	(my-env) $ python3 -m pip install bpython
+	(my-env) ~/mygithub/ovensensorweb/mysite $ python -m pip install bpython
 
 The version of pip included with Python might be out-of-date. You can optionally update pip with the following command:
 
-	(my-venv) $ python3 -m pip install --upgrade pip
+	(my-venv) ~/mygithub/ovensensorweb/mysite $ python -m pip install --upgrade pip
 	
 Here's a before and after of pip versions:
 
-	(my-venv) $ pip --version
-	pip 10.0.1 from /Users/urieow/mygithub/my-venv/lib/python3.7/site-packages/pip (python 3.7)
+	(my-venv) ~/mygithub/ovensensorweb/mysite $ pip --version
+	pip 10.0.1 from /Users/jeffb4real/mygithub/my-venv/lib/python3.7/site-packages/pip (python 3.7)
 	
-	(my-venv) $ python3 -m pip install --upgrade pip
+	(my-venv) $ python -m pip install --upgrade pip
 	Collecting pip
 	  Using cached https://files.pythonhosted.org/packages/5f/25/e52d3f31441505a5f3af41213346e5b6c221c9e086a166f3703d2ddaf940/pip-18.0-py2.py3-none-any.whl
 	Installing collected packages: pip
@@ -89,7 +94,7 @@ Many Django tools (e.g. creating a Django project, create an application, run te
 
 You _must_ be inside the mysite project root directory (e.g. mysite/...) You can tell which directory is the correct directory, because it will contain manage.py.
 
-	(my-env) $ python3 manage.py runserver
+	(my-env) ~/mygithub/ovensensorweb/mysite $ python manage.py runserver
 
 	Performing system checks...
 
@@ -99,7 +104,7 @@ You _must_ be inside the mysite project root directory (e.g. mysite/...) You can
 	Starting development server at http://127.0.0.1:8000/
 	Quit the server with CONTROL-C.
 
-__Note:__ It is recommended to use two separate terminal windows (cmd.exe on Windows), both of which can simultaneouly invoke the same virtual environment, in our case 'my-venv'. Run the Django server as shown above, in one terminal, which will display relevant Django server status information. Use the other terminal with the same 'my-venv' virtual environment to access Django's interactive shell commands, or to utilize manage.py.
+__Note:__ It is recommended to use two separate terminal windows (cmd.exe on Windows), both of which can simultaneouly invoke the same virtual environment, in our case 'my-venv'. Run the Django server as shown above, in one terminal, which will display relevant Django server status information. Use the other terminal with the same 'my-venv' virtual environment (you don't have to create it - just invoke it) to access Django's interactive shell commands, or to utilize manage.py.
 
 The Django server will continue to run until it is killed with Ctrl+C, or else some other error occurs (e.g. remove or adversely change one or more critical project files).
 
