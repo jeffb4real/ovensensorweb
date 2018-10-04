@@ -38,10 +38,10 @@ Issue this command to create our virtual environment _outside of_ any local repo
 Do this from _within_ the mysite project root directory:
 
 	Mac / Linux
-	~/mygithub/ovensensorweb/mysite $ source ../my-venv/bin/activate
+	~/mygithub/ovensensorweb/mysite $ source ../../my-venv/bin/activate
 
 	Windows
-	C:\Users\jeffb4real\mygithub\ovensensorweb\mysite $ ..\my-env\scripts\activate.bat	
+	C:\Users\jeffb4real\mygithub\ovensensorweb\mysite $ ..\..\my-env\scripts\activate.bat	
 
 You should now see a command line prompt that is pre-pended with the name of the virtual environment, "(my-venv)" as shown below. Here we're checking that our python resides within our virtual environment and that it is the proper version (Python 3 or greater).
 
