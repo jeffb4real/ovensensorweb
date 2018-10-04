@@ -12,9 +12,9 @@ This repository is planned to be integrated into chrisxkeith's repository of the
 
 The following sections detail all steps required to run the polls app in this Django project, mysite.
 
-### Install Python3
+### Install Python
 
-Download and install Python 3 for your platform:
+Download and install Python for your platform:
 https://www.python.org/downloads/
 
 Python 3.7.0 was used for this the Django tutorial.
@@ -23,7 +23,7 @@ __Note:__ Depending on your system environment, and whether or not you've also i
 
 ### Set up your virtual environment
 
-__Note:__ The pyvenv script has been deprecated as of Python 3.6 in favor of using python3 -m venv to help prevent any potential confusion as to which Python interpreter a virtual environment will be based on.
+__Note:__ The pyvenv script has been deprecated as of Python 3.6 in favor of using 'python -m venv' to help prevent any potential confusion as to which Python interpreter a virtual environment will be based on.
 
 Virtual environments are typically created on each user's PC and are not added to source control.
 
@@ -43,7 +43,7 @@ Do this from _within_ the mysite project root directory:
 	Windows
 	C:\Users\jeffb4real\mygithub\ovensensorweb\mysite $ ..\my-env\scripts\activate.bat	
 
-You should now see a command-line prompt that is pre-pended with the name of the virtual environment, "(my-venv)" as shown below. Here we're checking that our python resides within our virtual environment and that it is the proper version (Python 3 or greater).
+You should now see a command line prompt that is pre-pended with the name of the virtual environment, "(my-venv)" as shown below. Here we're checking that our python resides within our virtual environment and that it is the proper version (Python 3 or greater).
 
 	(my-venv) ~/mygithub/ovensensorweb/mysite $ which python
 	/Users/jeffb4real/mygithub/my-venv/bin/python
@@ -90,7 +90,7 @@ Here's a before and after of pip versions:
 
 The Django web framework includes its own web server and backend database (SQLite). To utilize these features we must first run the server.
 
-Many Django tools (e.g. creating a Django project, create an application, run tests, etc.) are available through manage.py, which was created at the root of our project directory, when we created the Django project. For a complete list of Django capabilities, type 'python3 manage.py --help'.
+Many Django tools (e.g. creating a Django project, create an application, run tests, etc.) are available through manage.py, which was created at the root of our project directory, when we created the Django project. For a complete list of Django capabilities, type 'python manage.py --help'.
 
 You _must_ be inside the mysite project root directory (e.g. mysite/...) You can tell which directory is the correct directory, because it will contain manage.py.
 
