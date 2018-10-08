@@ -1,7 +1,7 @@
 import datetime    # Python's module
 
 from django.db import models
-from django.utils import timezone    # Django's module
+from django.utils import timezone
 
 # Create your models here --
 # This model code gives Django a lot of information. With it, 
@@ -48,8 +48,6 @@ class Question(models.Model):
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
-
-
 class Choice(models.Model):
     # A relationship is defined, using ForeignKey. That tells Django 
     # each Choice is related to a single Question.
@@ -60,7 +58,52 @@ class Choice(models.Model):
     # It’s important to add __str__() methods to your models, not only for your
     # own convenience when dealing with the interactive prompt, but also because
     # objects’ representations are used throughout Django’s automatically-generated
-    # admin.
+    # admin site.
     def __str__(self):
         return self.choice_text
+
+class SensorData(models.Model):
+    # This model helps us put data from .csv files into our database
+    # TODO: update model to make unique time_of_event
+    #
+    # If you’d like to specify a custom primary key, just specify primary_key=True
+    # on one of your fields. If Django sees you’ve explicitly set Field.primary_key,
+    # it won’t add the automatic id column.
+    # Each model requires exactly one field to have primary_key=True
+    # (either explicitly declared or automatically added).
+    time_of_event = models.DateTimeField('time-Of-Event', primary_key=True)
+
+    # Django model types and validation:
+    # https://www.webforefront.com/django/modeldatatypesandvalidation.html
+    #
+    # TODO: figure out how to import options
+    # photon1 = options.SmallIntegerField()
+    # photon2 = options.SmallIntegerField()
+    # photon3 = options.SmallIntegerField()
+    #
+    # Assume that there's one sensor per Photon board
+    # 
+    # https://docs.djangoproject.com/en/2.1/ref/models/
+    #  null: If True, Django will store empty values as NULL in the database. Default is False.
+    #  blank: If True, the field is allowed to be blank. Default is False.
+    photon1 = models.IntegerField(null=True, blank=True)
+    photon2 = models.IntegerField(null=True, blank=True)
+    photon3 = models.IntegerField(null=True, blank=True)
+
+    def __str__(self):
+        return str(self.time_of_event)
+
+# How to import csv into Django model
+# https://stackoverflow.com/questions/39962977/how-to-import-csv-file-to-django-models
+# import csv
+# with open('import.csv') as csvfile:
+#     reader = csv.DictReader(csvfile)
+#     for row in reader:
+#         # The header row values become your keys
+#         suite_name = row['SuiteName']
+#         test_case = row['Test Case']
+#         # etc....
+
+#         new_revo = Revo(SuiteName=suite_name, TestCase=test_case,...)
+#         new_revo.save()
 

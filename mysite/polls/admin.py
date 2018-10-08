@@ -9,5 +9,7 @@ from django.contrib import admin
 # Just one thing to do: we need to tell the admin that Question objects
 # have an admin interface.
 from .models import Question
+from .models import SensorData
 
 admin.site.register(Question)
+admin.site.register(SensorData)

@@ -88,7 +88,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
+#
+# NAME
+# ENGINE
+# USER
+# PASSWORD
+# HOST
+# PORT
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -121,6 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+# JB:
 # Must set TIME_ZONE correctly
 # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 TIME_ZONE = 'UTC'    # original
