@@ -63,7 +63,7 @@ MIDDLEWARE = [
 
 # https://docs.djangoproject.com/en/2.1/intro/tutorial03/
 # When somebody requests a page from your website – say, “/polls/34/”,
-# Django will load the mysite.urls Python module because it’s pointed to
+# Django will load the mysite/urls.py Python module because it’s pointed to
 # by the ROOT_URLCONF setting.
 ROOT_URLCONF = 'mysite.urls'
 

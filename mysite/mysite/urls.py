@@ -32,7 +32,7 @@ from django.urls import include, path
 # two required: route and view, and two optional: kwargs, and name.
 #
 # When somebody requests a page from your website – say, “/polls/34/”,
-# Django will load the mysite.urls Python module because it’s pointed to
+# Django will load the mysite/urls.py Python module because it’s pointed to
 # by the ROOT_URLCONF setting.
 # It finds the variable named urlpatterns and traverses the patterns in order. 
 #

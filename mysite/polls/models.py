@@ -93,17 +93,3 @@ class SensorData(models.Model):
     def __str__(self):
         return str(self.time_of_event)
 
-# How to import csv into Django model
-# https://stackoverflow.com/questions/39962977/how-to-import-csv-file-to-django-models
-# import csv
-# with open('import.csv') as csvfile:
-#     reader = csv.DictReader(csvfile)
-#     for row in reader:
-#         # The header row values become your keys
-#         suite_name = row['SuiteName']
-#         test_case = row['Test Case']
-#         # etc....
-
-#         new_revo = Revo(SuiteName=suite_name, TestCase=test_case,...)
-#         new_revo.save()
-

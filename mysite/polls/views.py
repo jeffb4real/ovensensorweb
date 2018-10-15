@@ -30,6 +30,17 @@ from django.views import generic
 # Improving our view - also updated function get_queryset() below.
 from django.utils import timezone
 
+# Used for time.sleep()
+import time
+# To ingest .csv file
+import csv
+# Shell commands
+import subprocess
+
+# Playing with the API
+# https://docs.djangoproject.com/en/2.1/intro/tutorial02/Playing with the API
+from polls.models import SensorData
+
 
 ############################################
 # tutorial04 - Using the generic view
@@ -121,6 +132,35 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+
+def loaddb(request, DBfilename):
+    # Brute force - tell me what directory I'm in!! And make a full path to DB.
+    #p = subprocess.Popen(["pwd"], stdout=subprocess.PIPE)
+    #PathToDB = p.communicate()[0].rstrip().decode("utf-8") + '/polls/' + PathToDB
+    #return HttpResponse("Here's the full path to PathToDB: %s" % PathToDB)
+
+    # Hard-code a full path to DBfilename
+    PathToDB = '/Users/urieow/mygithub/ovensensorweb/mysite/polls/' + DBfilename
+
+    # How to import csv into Django model
+    # https://stackoverflow.com/questions/39962977/how-to-import-csv-file-to-django-models
+    with open(PathToDB) as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            # The header row values become your keys
+            toe = row['time-Of-Event'].replace('/', '-')
+            t1 = t2 = t3 = None
+            if (row['thermistor-test']):
+                t1 = row['thermistor-test']
+            if (row['thermistor2-test']):
+                t2 = row['thermistor2-test']
+            if (row['thermistor3-test']):
+                t3 = row['thermistor3-test']
+            q = SensorData(toe, t1, t2, t3)
+            q.save()
+    return HttpResponse("Done reading " + PathToDB)
+
 
 # ############################################
 # # tutorial01
