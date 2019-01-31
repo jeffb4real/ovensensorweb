@@ -31,7 +31,7 @@ Issue this command to create our virtual environment _outside of_ any local repo
 
 	~/mygithub $ python -m venv /path/to/new/virtual/environment
 	or just
-	~/mygithub $ python -m venv my-venv
+	~/mygithub $ python -m venv my-env
 
 ### Activate your Virtual Environment
 
